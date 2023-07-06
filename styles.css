@@ -6,14 +6,24 @@
 
 body{
     background-image: url('images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png');
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
     background-color: #f7f7f7;
+    mix-blend-mode:darken;
 }
 
-/* ----- navigation and main logo ----- */
+/* ----- Enter landing page ----- */
+
+.enter{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+
+/* ----- nav and main logo ----- */
 
 .navbar{
     height: auto;
