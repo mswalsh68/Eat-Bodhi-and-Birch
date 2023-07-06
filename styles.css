@@ -12,6 +12,7 @@ body{
     height: 100vh;
     background-color: #f7f7f7;
     mix-blend-mode:darken;
+    position: relative;
 }
 
 /* ----- Enter landing page ----- */
@@ -20,6 +21,11 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
+}
+
+.enter img{
+    height: 300px;
+    
 }
 
 
