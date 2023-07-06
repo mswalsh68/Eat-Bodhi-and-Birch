@@ -1,0 +1,120 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+/* ----- navigation and main logo ----- */
+
+.navbar{
+    height: auto;
+    color: #1f1e1e;
+}
+
+.navbar-expand-md{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: #1f1e1e;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background: #1f1e1e;
+    color: #f7f7f7;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.nav-item{
+    display:inline-flex;
+    justify-content: flex-end;
+}
+
+.navbar-collapse .nav-item{
+    display: block
+}
+
+.navbar-toggler{
+    color: #1f1e1e;
+}
+
+.navbar-toggler-icon{
+    display: grid;
+    align-items: flex-end;
+}
+
+#nav{
+    justify-content: flex-end;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;  
+}
+
+
+.mainLogo{
+    display: grid;
+    justify-items:flex-start;
+    padding: 1rem;
+    height: 100vh;
+
+}
+
+
+.mainLogo h1{
+    display: grid;
+    text-align: center;
+    overflow-wrap: normal;
+    overflow:visible;
+    padding: 1rem;
+    color: #0039fe;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/* ----- footer ----- */
+
+.footer{
+    display: grid;
+    place-items: center;
+    padding: .5rem;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #f7f7f7;
+    color: #1f1e1e;
+
+}
+
+.rights{
+    grid-column: 1/2;
+    display: grid;
+    text-align: center;
+}
+
+.footer a{
+    grid-column: 2/3;
+    display: grid;
+    text-align: center;
+    color: #1f1e1e;
+
+}
+
+.creator{
+    grid-column: 3/4;
+    display: grid;
+    text-align: center;
+}
