@@ -5,10 +5,6 @@
 }
 
 body{
-    background-image: url('images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png');
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 100vh;
     background-color: #f7f7f7;
     mix-blend-mode:darken;
@@ -21,6 +17,7 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
+    background-color: #f7f7f7;
 }
 
 .enter img{
@@ -95,7 +92,11 @@ body{
 }
 
 
-.mainLogo{
+.main{
+    background-image: url('images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
     display: grid;
     justify-items:flex-start;
     padding: 1rem;
