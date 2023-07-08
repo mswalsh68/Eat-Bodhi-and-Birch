@@ -1,14 +1,10 @@
+body{
+    background: #f7f7f7;
+}
 *, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    height: 100vh;
-    background-color: #f7f7f7;
-    mix-blend-mode:darken;
-    position: relative;
 }
 
 /* ----- Enter landing page ----- */
@@ -24,73 +20,48 @@ body{
     height: 200px;
 }
 
-.transition-fade {
-    transition: .5s;
-    opacity: 1;
-  }
-  
-  .is-animating .transition-fade {
-    opacity: 0;
-  }
 
 /* ----- nav and main logo ----- */
 
-.navbar{
-    height: auto;
-    color: #1f1e1e;
+#side_nav{
+    background: #000;
+    min-width: 200px;
+    max-width: 200px;
+    transition: all 300ms;
 }
 
-.navbar-expand-md{
-    display: flex;
-    justify-content: flex-end;
+#side_nav.active{
+    margin-left: 0;
 }
 
-.navbar a {
-    color: #1f1e1e;
-    text-decoration: none;
-    font-weight:bold;
+.leaf{
+    mix-blend-mode: darken;
+}
+.content{
+    min-height: 100vh;
+    width: 100%;
 }
 
-.navbar a:hover,
-.navbar a:focus {
-    background: #1f1e1e;
+hr .h-color{
+    background: #f7f7f7;
+}
+
+.sidebar li.active{
+    background: #f7f7f7;
+    border-radius: 8px;
+}
+
+.sidebar li.active a, .sidebar li.active a:hover{
+    color: #000;
+}
+
+.sidebar li a{
     color: #f7f7f7;
-    font-weight: 500;
-    border-radius: 5px;
 }
 
-.nav-item{
-    display:inline-flex;
-    justify-content: flex-end;
+.sidebar a{
+    text-decoration: none;
 }
-.navbar-brand{
-    display: grid;
-    place-items: center;
-    padding: .25rem;
-}
-
-
-.navbar-collapse .nav-item{
-    display: block
-}
-
-.navbar-toggler{
-    color: #1f1e1e;
-}
-
-.navbar-toggler-icon{
-    display: grid;
-    align-items: flex-end;
-}
-
-#nav{
-    justify-content: flex-end;
-}
-
-.navbar-collapse{
-    justify-content: flex-end;  
-}
-
 
 .main{
     background-image: url('images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png');
@@ -100,7 +71,7 @@ body{
     display: grid;
     justify-items:flex-start;
     padding: 1rem;
-    height: 100vh;
+    height: 90vh;
 
 }
 
@@ -149,10 +120,27 @@ body{
     text-align: center;
 }
 
-@media screen and (min-width: 800px){
-    .enter img{
-        height: 300px;
-        
-    }
+#side_nav{
+    background: #000;
+    min-width: 200px;
+    max-width: 200px;
+    transition: all 300ms;
 }
-    
+
+#side_nav.active{
+    margin-left: 0;
+}
+
+
+@media (max-width: 767px){
+    #side_nav{
+        margin-left: -200px;
+        position: fixed;
+        min-height: 100vh;
+        z-index: 1;
+    }
+
+    #side_nav.active{
+        margin-left: 0;
+    }
+}    
