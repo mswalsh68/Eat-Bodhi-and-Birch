@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+/* ----- Enter landing page ----- */
+
+.enter{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    mix-blend-mode: darken;
+
+}
+
+.enter img{
+    height: 200px;
+}
+
+/* ----- Navigation ----- */
+
 body{
     background: #f7f7f7;
     overflow-x: hidden;
@@ -48,14 +65,7 @@ body{
     margin-inline: .5rem;
 }
 
-.mainContent{
-    display: block;
-    background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
-    background-position: top;
-    background-repeat: no-repeat;
-    mix-blend-mode: darken;
-    height: 100vh;
-}
+/* ----- Footer ----- */
 
 .footer{
     display: grid;
@@ -81,6 +91,19 @@ body{
     text-align: center;
 }
 
+/* ----- Main Content ----- */
+
+.mainContent{
+    display: block;
+    background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    mix-blend-mode: darken;
+    height: 100vh;
+}
+
+
+/* ----- Mobile and Small Screen ----- */
 
 @media (max-width: 50em) {
     .primary-navigation{
