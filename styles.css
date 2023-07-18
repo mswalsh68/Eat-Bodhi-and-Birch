@@ -124,5 +124,15 @@ body{
         height: 1.5rem;
     }
 
+    .footer{
+        display: block;
+        padding: 1rem;
+    }
+
+    .rights, .footer a, .creator{
+        text-align: left;
+    }
+    
+
 }
 
