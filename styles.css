@@ -57,6 +57,30 @@ body{
     height: 100vh;
 }
 
+.footer{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.rights{
+    grid-column: 1/2;
+    display: grid;
+    text-align: center;
+}
+
+.footer a{
+    grid-column: 2/3;
+    display: grid;
+    text-align: center;
+}
+
+.creator{
+    grid-column: 3/4;
+    display: grid;
+    text-align: center;
+}
+
 
 @media (max-width: 50em) {
     .primary-navigation{
