@@ -6,9 +6,6 @@
 
 body{
     background: #f7f7f7;
-    background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
-    background-position: top;
-    background-repeat: no-repeat;
     overflow-x: hidden;
 }
 
@@ -53,6 +50,10 @@ body{
 
 .mainContent{
     display: block;
+    background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    mix-blend-mode: darken;
     height: 100vh;
 }
 
