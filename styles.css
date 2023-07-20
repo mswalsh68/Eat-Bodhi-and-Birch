@@ -16,7 +16,7 @@
 }
 
 .enter img{
-    height: 200px;
+    height: 500px;
 }
 
 /* ----- Navigation ----- */
@@ -94,14 +94,13 @@ body{
 /* ----- Main Content ----- */
 
 .mainContent{
-    display: block;
+    display: grid;
     background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
     background-position: top;
     background-repeat: no-repeat;
     mix-blend-mode: darken;
     height: 100vh;
 }
-
 
 /* ----- Mobile and Small Screen ----- */
 
