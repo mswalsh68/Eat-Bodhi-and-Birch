@@ -21,7 +21,11 @@ body{
     height: 100vh;
     background-color: #f7f7f7;
     mix-blend-mode: darken;
+}
 
+.leaf{
+    display: grid;
+    place-items: center;
 }
 
 .enter img{
