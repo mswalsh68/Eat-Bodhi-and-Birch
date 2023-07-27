@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
+body{
+    background: #f7f7f7;
+    overflow-x: hidden;
+}
+
 /* ----- Enter landing page ----- */
 
 .enter{
@@ -21,16 +30,6 @@
 
 /* ----- Navigation ----- */
 
-body{
-    background: #f7f7f7;
-    overflow-x: hidden;
-    background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
-    background-position: top;
-    background-repeat: no-repeat;
-    mix-blend-mode: darken; 
-    height: 100vh;
-    
-}
 
 .flex{
     display: flex;
@@ -38,82 +37,100 @@ body{
 }
 
 .logo{
-    margin: 1rem;
     mix-blend-mode: darken;
     cursor: pointer;
 
 }
-
 .primary-header{
-    padding-right: 2rem;
-    align-items: center;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    align-items: start;
     justify-content: space-between;
 }
 
 .primary-navigation{
-    list-style: none;
-    padding: 0;
-    margin: 0;
     gap: 2em;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 75%;
+    flex-direction: column;
+    padding: min(20vh,10rem) 1em;
+    background: rgba(0, 0, 0, 0.753);
+    backdrop-filter: blur(1em);
+    transform: translateX(100%);
+    transition: transform 300ms ease-out;
+    list-style: none;
+}
+.primary-navigation a{
+    text-decoration: none;
+    color: #f7f7f7d7;
+}
+.primary-navigation[data-visible="true"]{
+    transform: translateX(0%);
 }
 
 .mobile-nav-toggle{
- display: none;
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    right: 30px;
+    height: 2rem;
+    aspect-ratio: 1;
+    background-image: url('images/Hamburger_icon.svg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    mix-blend-mode: darken;
+    border: 0;
+    cursor: pointer;
 }
 
-
-.primary-navigation a{
-    text-decoration: none;
-    color: black;
+.mobile-nav-toggle[aria-expanded="true"]{
+    background-image: url(images/close_Hamburger_icon.svg.png);
+    height: 1.5rem;
 }
 
 .primary-navigation a > span{
     margin-inline: .5rem;
 }
 
-/* ----- Footer ----- */
-
-.footer{
-    display: grid;
-    padding: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.rights{
-    grid-column: 1/2;
-    display: grid;
-    text-align: center;
-}
-
-.footer a{
-    grid-column: 2/3;
-    display: grid;
-    text-align: center;
-}
-
-.creator{
-    grid-column: 3/4;
-    display: grid;
-    text-align: center;
-}
-
 /* ----- Main Content ----- */
 
 .main{
-    display: flex;
-    padding: 3rem;
-    place-items: center;
+    min-height: 65vh;
 }
 
+.menu, .about, .contact{
+    text-align: center;
+}
+
+.hello1{
+    display: none;
+}
+
+.hello2{
+    display: grid;
+    place-content: left;
+    background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
+    background-position: 90%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50vh;
+    padding-right:5rem;
+    padding-left: 5rem;
+}
 
 .container{
-    width: 50%;
-    min-height: 50vh;
+    margin: 2rem;
+    overflow: hidden
 }
 
 
 .swiper {
     width: 90%;
+    border-radius: 10px;
+
 }
 
 
@@ -125,71 +142,103 @@ body{
 }
 
 
+/* ----- Footer ----- */
+
+.footer{
+    /* display: grid; */
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.rights{
+    /* grid-column: 1/2; */
+    display: grid;
+    text-align: center;
+}
+
+.footer a{
+    /* grid-column: 2/3; */
+    display: grid;
+    text-align: center;
+}
+
+.creator{
+    /* grid-column: 3/4; */
+    display: grid;
+    text-align: center;
+}
 
 
-/* ----- Mobile and Small Screen ----- */
 
-@media (max-width: 70em) {
+
+/* ----- Large Screen ----- */
+
+
+@media (min-width: 63em) {
+    .primary-header{
+        padding-right: 2rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
     .primary-navigation{
+        all: unset;
+        list-style: none;
+        padding: 0;
+        margin: 0;
         gap: 2em;
-        position: fixed;
-        z-index: 1000;
-        inset: 0 0 0 75%;
-        flex-direction: column;
-        padding: min(20vh,10rem) 1em;
-        background: rgba(0, 0, 0, 0.753);
-        backdrop-filter: blur(1em);
-        transform: translateX(100%);
-        transition: transform 300ms ease-out;
-
     }
-    .primary-navigation a{
-        color: #f7f7f7d7;
-    }
-
-    .primary-navigation[data-visible="true"]{
-        transform: translateX(0%);
-    }
-
+    
     .mobile-nav-toggle{
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        right: 30px;
-        height: 2rem;
-        aspect-ratio: 1;
-        background-image: url('images/Hamburger_icon.svg.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        mix-blend-mode: darken;
-        border: 0;
-        cursor: pointer;
+     display: none;
+    }
+    
+    
+    .primary-navigation a{
+        text-decoration: none;
+        color: black;
+    }
+    
+
+    .flex{
+        display: flex;
+        gap: 1rem;
     }
 
-    .mobile-nav-toggle[aria-expanded="true"]{
-        background-image: url(images/close_Hamburger_icon.svg.png);
-        height: 1.5rem;
+    .main{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        overflow: hidden;
+        min-height: 65vh;
+        place-content: center;
+    }
+
+    .menu, .about, .contact{
+        grid-column: 1/6;
+        text-align: center;
+    }
+
+    .hello1{
+        display: grid;
+        margin: 2rem 0rem 2rem 2rem;
+        grid-column: 1/3;
+        background-image: url("images/1-19866_transparent-white-tree-png-silver-birch-tree-cad.png");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        place-content: left;
+    }
+
+    .hello2{
+        display:none
     }
 
     .container{
-        margin-left: unset;
-        width: 100%;
-        min-height: 50vh;
-    }
-
-
-    
-    .footer{
-        display: block;
-        padding: 1rem;
-    }
-
-    .rights, .footer a, .creator{
-        text-align: left;
-    }
-    
-
+        grid-column: 3/6;
+        margin: unset;
+        margin: 2rem 0 2rem 0;
+        }
 }
-
