@@ -13,6 +13,21 @@ body{
     overflow-x: hidden;
 }
 
+.transition-1{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    z-index: 500;
+    background-color: rgb(0, 0, 0);
+    transition: .5s ease-out;
+}
+
+.transition-1.is-active{
+    right: 0px;
+}
+
 /* ----- Enter landing page ----- */
 
 .enter{
@@ -28,8 +43,12 @@ body{
     place-items: center;
 }
 
-.enter img{
-    height: 500px;
+.enter a{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/BODHI\ &\ BIRCH-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* ----- Navigation ----- */
@@ -42,7 +61,6 @@ body{
 
 .logo{
     mix-blend-mode: darken;
-    cursor: pointer;
 
 }
 .primary-header{
